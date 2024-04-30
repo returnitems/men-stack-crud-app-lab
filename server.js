@@ -62,4 +62,9 @@ app.get('/cars/:carId/edit', async (req, res) => {
     res.render('cars/edit.ejs', {
         selectedCar: selectedCar,
     });
+});
+
+app.delete('/cars/:carId', async (req, res) => {
+    await car.findByIdAndDelete(req.params.carId);
+    res.redirect('/cars')
 })

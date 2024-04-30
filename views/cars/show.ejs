@@ -13,5 +13,9 @@
     <a href="/cars">Back to Inventory</a>
     <br>
     <a href="/">Home</a>
+    <br>
+    <form action="/cars/<%= clickedCar._id %>?_method=DELETE" method="POST">
+        <button>Delete Car</button>
+    </form>
 </body>
 </html>
