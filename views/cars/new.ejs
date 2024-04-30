@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Car</title>
+  </head>
+  <body>
+    <h1>Enter a new car into inventory</h1>
+    <form action="/cars" method="POST">
+      <label for="year">Year:</label>
+      <input type="text" name="year" id="year" />
+
+      <label for="make">Make:</label>
+      <input type="text" name="make" id="make" />
+
+      <label for="model">Model:</label>
+      <input type="text" name="model" id="model" />
+
+      <label for="color">Color:</label>
+      <input type="text" name="color" id="color" />
+
+      <label for="isPrepped">Is it prepped for sale?</label>
+      <input type="checkbox" name="isPrepped" id="isPrepped" />
+
+      <button type="submit">Enter Car</button>
+    </form>
+    <a href="/cars">Back to inventory</a>
+    <br>
+    <a href="/">Home</a>
+  </body>
+</html>

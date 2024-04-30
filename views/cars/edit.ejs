@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= selectedCar.year %> <%= selectedCar.model %></title>
+</head>
+<body>
+    <h1>Edit Car</h1>
+    <form action="/cars/<%= selectedCar._id %>?_method=PUT" method="POST">
+      <label for="year">Year:</label>
+      <input type="text" name="year" id="year" value="<%= selectedCar.year %>"/>
+
+      <label for="make">Make:</label>
+      <input type="text" name="make" id="make" value="<%= selectedCar.make %>"/>
+
+      <label for="model">Model:</label>
+      <input type="text" name="model" id="model" value="<%= selectedCar.model %>"/>
+
+      <label for="color">Color:</label>
+      <input type="text" name="color" id="color" value="<%= selectedCar.color %>"/>
+
+      <label for="isPrepped">Is it prepped for sale?</label>
+      <input type="checkbox" name="isPrepped" id="isPrepped" <% if (selectedCar.isPrepped) { %>
+       checked
+      <% } %>/>
+
+      <button type="submit">Enter Car</button>
+    </form>
+</body>
+</html>

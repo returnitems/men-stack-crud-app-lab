@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= clickedCar.year %> <%= clickedCar.model %></title>
+</head>
+<body>
+    <h1><%= clickedCar.year %> <%= clickedCar.make %> <%= clickedCar.model %></h1>
+    <p>This is a beautiful car in <%= clickedCar.color %> color! Buy Now!!!!!!!!!!!!!!</p>
+    <a href="/cars/<%= clickedCar._id %>/edit">Edit Car</a>
+    <br>
+    <a href="/cars">Back to Inventory</a>
+    <br>
+    <a href="/">Home</a>
+</body>
+</html>

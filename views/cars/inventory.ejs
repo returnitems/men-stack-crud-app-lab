@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+</head>
+<body>
+    <h1>Current Inventory</h1>
+    <ul>
+        <% cars.forEach(car => { %>
+            <li><a href="/cars/<%= car._id %>"><%= car.year %> <%= car.model %></a></li>
+        <% }) %>
+    </ul>
+    <a href="cars/new">Enter a new car into the inventory</a>
+    <br>
+    <br>
+    <a href="/">Home</a>
+</body>
+</html>
